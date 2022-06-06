@@ -1,0 +1,49 @@
+
+.div-title{
+    font-size: 16px;
+    font-weight: 500;
+}
+.div-header{
+    text-align: start;
+    padding-left: 15px;
+}
+.div-header>input{
+    width: 80%;
+    background-color: rgba(197, 197, 197, 0.3);
+    border: 0px;
+    border-radius: 5px;
+}
+.div-body>textarea{
+   
+    background-color: rgba(197, 197, 197, 0.3);
+    border: 0px;
+    border-radius: 5px;
+}
+.div-header>label{
+    margin-right: 51px;
+    font-weight: 500;
+}
+
+.div-group{
+    float: right;
+    padding-right: 15px;
+}
+.div-body{
+    display: flex;
+    align-items: flex-start;
+    padding: 10px;
+    padding-left: 15px;
+    margin: 0px!important;
+    min-height: 100px;
+}
+.div-body>label{
+    margin-right: 20px;
+    font-weight: 500;
+}
+.div-footer{
+    
+    font-size: 12px;
+    color: gray;
+
+
+}

@@ -1,0 +1,19 @@
+<form #editForms="ngForm" (ngSubmit)="editForm()" autocomplete="off">
+<div class="div-header">
+    <label for="post-title">Titlu:  </label>
+    <input type="text" name="title" id="post-title" [(ngModel)]="editItem.Title" value="{{editItem.Title}}"/>
+</div> 
+<div class="div-body">
+    <label for="post-desc">Continut:</label>
+   <textarea id="post-desc"  name="description" [(ngModel)]="editItem.Description" rows="5" cols="60"></textarea>
+</div>
+
+<div class="div-footer">
+    <div class="btn-group div-group">
+        <button  class="btn btn-sm btn-success" type="submit">Save</button>
+        <button  routerLink='/' class="btn btn-sm btn-danger">Cancel</button>
+    </div>
+   
+</div>
+</form>
+

@@ -1,0 +1,17 @@
+<form #createForms="ngForm" (ngSubmit)="createForm()" autocomplete="off">
+<div  class="divStyle">
+    <div class="div-header">
+        <label for="post-title">Titlu:  </label>
+        <input name="title" [(ngModel)]="model.title" type="text" id="post-title"/>
+        
+    </div> 
+    <div class="div-body">
+        <label for="post-desc">Continut:</label>
+       <textarea name="description" [(ngModel)]="model.description" id="post-desc" rows="5" cols="60"></textarea>
+    </div>
+    
+    <div class="div-footer">
+       <button class="btn btn-sm btn-success" type="submit">Post</button>
+    </div>
+ </div>
+</form>

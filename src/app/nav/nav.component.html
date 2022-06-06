@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">SharePosts</a>
+        <ul class="navbar-nav mr-auto" *ngIf="(accountService.currentUser$ | async) === null">
+            <li class="nav-item">
+            <a class="nav-link" routerLink="/register" routerLinkActive="active">Register</a>
+            </li>
+            
+        </ul>
+
+       
+        <ul class="navbar-nav mr-auto" *ngIf="accountService.currentUser$ | async">
+            
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/addpost" routerLinkActive="active">Add Post</a>
+            </li>
+        </ul>
+
+        <a *ngIf="accountService.currentUser$ | async" class="nav-link" (click)="logout()">Logout</a>
+        <form *ngIf="(accountService.currentUser$ | async) === null " #loginForm="ngForm" class="form-inline mt-2 mt-md-0" (ngSubmit)="login()" autocomplete="off">
+            <input name="email" [(ngModel)]="model.email" class="form-control mr-sm-2" type="text" placeholder="Email">
+            <input name="password" [(ngModel)]="model.password" class="form-control mr-sm-2" type="password" placeholder="Password">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
+        </form>
+    </div>
+  </nav>
